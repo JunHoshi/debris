@@ -2,17 +2,17 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-//import java.util.Random;
+
 
 public class Output {
     public static void main(String[] args) {
         Currentdate();
         TaskRandom();
-        sum1();
-        sum2();
+        sum1();//奇数
+        sum2();//偶数
     }
     private static void Currentdate(){
-        Date now=new Date();
+        Date now = new Date();
         System.out.println(now);
     }
     private static void TaskRandom(){
@@ -24,16 +24,21 @@ public class Output {
 
     }
     public static void sum1() {
-        int y = 0;
-        for (int i = 1; i < 100; i = i + 2) {
-            y += i;
+        int s=0;
+
+        for(int x = 1; x < 100; x++){
+        if (x % 2 != 0){
+            s += x;
         }
-        System.out.println(y);
+    }
+        System.out.println(s);
     }
     private static void sum2(){
         int z= 0;
-        for(int x = 0; x <= 100; x = x + 2) {
-            z += x;
+        for(int y = 0; y <= 100; y++) {
+            if (y % 2 == 0){
+                z += y;
+            }
         }
         System.out.println(z);
     }
